@@ -13,11 +13,7 @@ export const ThemeProvider = ({ children }) => {
 	}, [theme]);
 
 	const toggleTheme = () => {
-		if (theme === 'dark') {
-			setTheme('light');
-		} else if (theme === 'light') {
-			setTheme('dark');
-		}
+		setTheme(theme === 'dark' ? 'light' : 'dark');
 	};
 
 	useEffect(() => {
@@ -34,6 +30,6 @@ export const ThemeProvider = ({ children }) => {
 	);
 };
 
-const useTheme = () => {
+export const useTheme = () => {
 	return useContext(ThemeContext);
 };

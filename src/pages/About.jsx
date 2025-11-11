@@ -1,10 +1,10 @@
-const NewsPage = () => {
+const AboutPage = () => {
 	return (
 		<div className="p-8">
-			<h1 className="text-3xl font-bold">NewsPage</h1>
+			<h1 className="text-3xl font-bold">AboutPage</h1>
 			<p className="text-gray-600 dark:text-gray-400">Coming soon...</p>
 		</div>
 	);
 };
 
-export default NewsPage;
+export default AboutPage;
