@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { useState } from 'react';
 
 import DashboardPage from './pages/Dashboard';
 import CalenderPage from './pages/Calendar';
@@ -14,23 +15,27 @@ import WorldClockPage from './pages/WorldClock';
 import AboutPage from './pages/About';
 import PageNotFound from './pages/PageNotFound';
 
+import Layout from './components/layout/Layout';
+
 const App = () => {
 	return (
-		<Routes>
-			<Route path="/" element={<DashboardPage />} />
-			<Route path="/about" element={<AboutPage />} />
-			<Route path="/calendar" element={<CalenderPage />} />
-			<Route path="/currency" element={<CurrencyPage />} />
-			<Route path="/horoscope" element={<HoroscopePage />} />
-			<Route path="/moodPlayer" element={<MoodPayerPage />} />
-			<Route path="/news" element={<NewsPage />} />
-			<Route path="/quotes" element={<QuotePage />} />
-			<Route path="/setting" element={<SettingsPage />} />
-			<Route path="/todoList" element={<TodoListPage />} />
-			<Route path="/weather" element={<WeatherPage />} />
-			<Route path="/worldClock" element={<WorldClockPage />} />
-			<Route path="*" element={<PageNotFound />} />
-		</Routes>
+		<Layout>
+			<Routes>
+				<Route path="/" element={<DashboardPage />} />
+				<Route path="/about" element={<AboutPage />} />
+				<Route path="/calender" element={<CalenderPage />} />
+				<Route path="/currency" element={<CurrencyPage />} />
+				<Route path="/horoscope" element={<HoroscopePage />} />
+				<Route path="/moodPlayer" element={<MoodPayerPage />} />
+				<Route path="/news" element={<NewsPage />} />
+				<Route path="/quotes" element={<QuotePage />} />
+				<Route path="/settings" element={<SettingsPage />} />
+				<Route path="/todoList" element={<TodoListPage />} />
+				<Route path="/weather" element={<WeatherPage />} />
+				<Route path="/worldClock" element={<WorldClockPage />} />
+				<Route path="*" element={<PageNotFound />} />
+			</Routes>
+		</Layout>
 	);
 };
 

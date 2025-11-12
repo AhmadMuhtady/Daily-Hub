@@ -4,12 +4,15 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App.jsx';
 import { ThemeProvider } from './context/ThemeContext.jsx';
+import { SideBarProvider } from './context/SideBarContext.jsx';
 
 createRoot(document.getElementById('root')).render(
 	<StrictMode>
 		<ThemeProvider>
 			<BrowserRouter>
-				<App />
+				<SideBarProvider>
+					<App />
+				</SideBarProvider>
 			</BrowserRouter>
 		</ThemeProvider>
 	</StrictMode>
