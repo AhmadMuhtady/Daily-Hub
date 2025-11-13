@@ -18,9 +18,14 @@ export const ThemeProvider = ({ children }) => {
 
 	useEffect(() => {
 		const html = document.documentElement;
-		html.classList.remove('dark');
-		html.classList.remove('light');
-		html.classList.add(theme);
+
+		if (theme === 'dark') {
+			html.classList.remove('light');
+			html.classList.add('dark');
+		} else {
+			html.classList.remove('dark');
+			html.classList.add('light');
+		}
 	}, [theme]);
 
 	return (

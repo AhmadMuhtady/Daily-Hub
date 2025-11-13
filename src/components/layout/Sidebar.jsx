@@ -22,7 +22,7 @@ const SlideBar = ({}) => {
 		<div
 			className={`fixed ${
 				SideBarOpen ? 'w-[200px]' : 'w-[60px]'
-			} transition-all duration-300 bg-white dark:bg-slate-800 dark:text-white shadow-xl h-screen`}
+			} transition-all duration-200 bg-white dark:bg-slate-800 dark:text-white shadow-xl h-screen`}
 		>
 			<div>
 				<Link
@@ -32,7 +32,7 @@ const SlideBar = ({}) => {
 					<LayoutDashboardIcon size={24} />
 					{SideBarOpen && <span>Dashboard</span>}
 					{!SideBarOpen && (
-						<span className="absolute left-full ml-2 px-2 py-1 bg-gray-900 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+						<span className="absolute left-full ml-2 px-2 py-1 bg-gray-900 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
 							Dashboard
 						</span>
 					)}
@@ -44,7 +44,7 @@ const SlideBar = ({}) => {
 					<ThermometerSunIcon size={24} />
 					{SideBarOpen && <span>Weather</span>}
 					{!SideBarOpen && (
-						<span className="absolute left-full ml-2 px-2 py-1 bg-gray-900 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+						<span className="absolute left-full ml-2 px-2 py-1 bg-gray-900 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
 							Weather
 						</span>
 					)}
@@ -56,7 +56,7 @@ const SlideBar = ({}) => {
 					<CalendarDaysIcon size={24} />
 					{SideBarOpen && <span>Calender</span>}
 					{!SideBarOpen && (
-						<span className="absolute left-full ml-2 px-2 py-1 bg-gray-900 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+						<span className="absolute left-full ml-2 px-2 py-1 bg-gray-900 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
 							Calender
 						</span>
 					)}
@@ -68,7 +68,7 @@ const SlideBar = ({}) => {
 					<NewspaperIcon size={24} />
 					{SideBarOpen && <span>News</span>}
 					{!SideBarOpen && (
-						<span className="absolute left-full ml-2 px-2 py-1 bg-gray-900 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+						<span className="absolute left-full ml-2 px-2 py-1 bg-gray-900 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
 							News
 						</span>
 					)}
@@ -80,7 +80,7 @@ const SlideBar = ({}) => {
 					<QuoteIcon size={24} />
 					{SideBarOpen && <span>Quotes</span>}
 					{!SideBarOpen && (
-						<span className="absolute left-full ml-2 px-2 py-1 bg-gray-900 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+						<span className="absolute left-full ml-2 px-2 py-1 bg-gray-900 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
 							Quotes
 						</span>
 					)}
@@ -92,7 +92,7 @@ const SlideBar = ({}) => {
 					<Sparkles size={24} />
 					{SideBarOpen && <span>Horoscope</span>}
 					{!SideBarOpen && (
-						<span className="absolute left-full ml-2 px-2 py-1 bg-gray-900 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+						<span className="absolute left-full ml-2 px-2 py-1 bg-gray-900 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
 							Horoscope
 						</span>
 					)}
@@ -104,7 +104,7 @@ const SlideBar = ({}) => {
 					<ListTodoIcon size={24} />
 					{SideBarOpen && <span>Todo</span>}
 					{!SideBarOpen && (
-						<span className="absolute left-full ml-2 px-2 py-1 bg-gray-900 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+						<span className="absolute left-full ml-2 px-2 py-1 bg-gray-900 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
 							Todo
 						</span>
 					)}
@@ -116,7 +116,7 @@ const SlideBar = ({}) => {
 					<CircleDollarSignIcon size={24} />
 					{SideBarOpen && <span>Currency</span>}
 					{!SideBarOpen && (
-						<span className="absolute left-full ml-2 px-2 py-1 bg-gray-900 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+						<span className="absolute left-full ml-2 px-2 py-1 bg-gray-900 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
 							Currency
 						</span>
 					)}
@@ -128,7 +128,7 @@ const SlideBar = ({}) => {
 					<Clock2Icon size={24} />
 					{SideBarOpen && <span>Clock</span>}
 					{!SideBarOpen && (
-						<span className="absolute left-full ml-2 px-2 py-1 bg-gray-900 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+						<span className="absolute left-full ml-2 px-2 py-1 bg-gray-900 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
 							Clock
 						</span>
 					)}
@@ -140,7 +140,7 @@ const SlideBar = ({}) => {
 					<MusicIcon size={24} />
 					{SideBarOpen && <span>Music</span>}
 					{!SideBarOpen && (
-						<span className="absolute left-full ml-2 px-2 py-1 bg-gray-900 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+						<span className="absolute left-full ml-2 px-2 py-1 bg-gray-900 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
 							Music
 						</span>
 					)}
@@ -148,25 +148,13 @@ const SlideBar = ({}) => {
 			</div>
 			<div>
 				<Link
-					to="/about"
-					className="group relative flex items-center gap-3 p-3 hover:text-blue-500"
-				>
-					<BadgeInfoIcon size={24} />
-					{SideBarOpen && <span>About</span>}
-					{!SideBarOpen && (
-						<span className="absolute left-full ml-2 px-2 py-1 bg-gray-900 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-							About
-						</span>
-					)}
-				</Link>
-				<Link
 					to="/settings"
 					className="group relative flex items-center gap-3 p-3 hover:text-blue-500"
 				>
 					<CogIcon size={24} />
 					{SideBarOpen && <span>Settings</span>}
 					{!SideBarOpen && (
-						<span className="absolute left-full ml-2 px-2 py-1 bg-gray-900 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+						<span className="absolute left-full ml-2 px-2 py-1 bg-gray-900 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
 							Settings
 						</span>
 					)}

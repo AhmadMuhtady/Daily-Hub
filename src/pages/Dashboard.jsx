@@ -1,4 +1,4 @@
-const Dashboard = () => {
+const HoroscopePage = () => {
 	return (
 		<div className="p-8">
 			<h1 className="text-3xl font-bold">Dashboard</h1>
@@ -7,4 +7,4 @@ const Dashboard = () => {
 	);
 };
 
-export default Dashboard;
+export default HoroscopePage;
