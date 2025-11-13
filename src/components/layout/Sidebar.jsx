@@ -9,7 +9,6 @@ import {
 	CircleDollarSignIcon,
 	Clock2Icon,
 	MusicIcon,
-	BadgeInfoIcon,
 	CogIcon,
 	Sparkles,
 } from 'lucide-react';

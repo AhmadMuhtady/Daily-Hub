@@ -38,7 +38,7 @@ const Header = () => {
 						to="/"
 						className="flex justify-center items-center gap-2 text-blue-400"
 					>
-						<RadarIcon className="text-red" />
+						<RadarIcon className="text-red-500" />
 						<h1>
 							Daily<span className="text-orange-300">Hub</span> •{' '}
 							{getPageTitle()}

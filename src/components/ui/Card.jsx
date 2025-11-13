@@ -14,3 +14,5 @@ const Card = ({ children, onClick, className = '', hover = false }) => {
 		</div>
 	);
 };
+
+export default Card;
