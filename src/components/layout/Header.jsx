@@ -67,7 +67,7 @@ const Header = () => {
 						/>
 						<span className="">About</span>
 					</Link>
-					<Button onClick={toggleTheme} variant="secondary" size="sm">
+					<Button onClick={toggleTheme} variant="primary" size="sm">
 						{theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
 					</Button>
 				</div>
