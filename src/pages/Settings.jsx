@@ -102,6 +102,26 @@ const SettingsPage = () => {
 			</Card>
 
 			<Card hover className="mb-3">
+				<h2 className="text-blue-400 font-bold p-5">Quotes</h2>
+				<div className="flex items-center gap-3 p-3">
+					<label className="text-orange-300">Category: </label>
+					<select
+						value={settings.quoteCategory}
+						onChange={(e) => updateSettings({ quoteCategory: e.target.value })}
+						className="p-2 border rounded-lg bg-white dark:bg-slate-700 dark:text-white"
+					>
+						<option value="inspirational">Inspirational</option>
+						<option value="motivational">Motivational</option>
+						<option value="life">Life</option>
+						<option value="wisdom">Wisdom</option>
+						<option value="success">Success</option>
+						<option value="happiness">Happiness</option>
+						<option value="famous-quotes">Famous Quotes</option>
+					</select>
+				</div>
+			</Card>
+
+			<Card hover className="mb-3">
 				<h2 className="text-blue-400 font-bold p-5">Alerts</h2>
 				<div className="flex items-center gap-3 mb-3">
 					<span className="text-orange-300 dark:text-orange-300">

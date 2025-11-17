@@ -7,6 +7,7 @@ const defaultSettings = {
 	tempUnit: 'C',
 	timeFormat: '24h',
 	newsCategory: 'general',
+	quoteCategory: 'inspirational',
 	weatherAlerts: true,
 	newsUpdates: true,
 };
