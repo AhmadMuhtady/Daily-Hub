@@ -4,7 +4,7 @@ const SettingsContext = createContext();
 
 const defaultSettings = {
 	location: 'Beirut',
-	tempUnit: 'C',
+	tempUnit: 'metric',
 	timeFormat: '24h',
 	newsCategory: 'general',
 	quoteCategory: 'inspirational',
