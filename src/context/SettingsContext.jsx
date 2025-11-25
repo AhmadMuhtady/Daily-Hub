@@ -18,6 +18,40 @@ export const SettingsProvider = ({ children }) => {
 		return stored ? JSON.parse(stored) : defaultSettings;
 	});
 
+	const [favoriteCities, setFavoriteCities] = useState(() => {
+		const stored = localStorage.getItem('favorites');
+		return stored ? JSON.parse(stored) : [settings.location];
+	});
+
+	const isFavorite = (city) => {
+		return favoriteCities.includes(city);
+	};
+
+	const toggleFavorite = (city) => {
+		setFavoriteCities((prev) => {
+			const normalizedCity = city.trim();
+			const existing = prev.includes(normalizedCity);
+
+			if (existing) {
+				// Remove from favorites
+				return prev.filter((c) => c !== normalizedCity);
+			}
+
+			// Check max limit
+			if (prev.length >= 5) {
+				alert('Maximum 5 favorite cities allowed!');
+				return prev;
+			}
+
+			// Add to favorites
+			return [...prev, normalizedCity];
+		});
+	};
+
+	useEffect(() => {
+		localStorage.setItem('favorites', JSON.stringify(favoriteCities));
+	}, [favoriteCities]);
+
 	useEffect(() => {
 		localStorage.setItem('Settings', JSON.stringify(settings));
 	}, [settings]);
@@ -27,7 +61,15 @@ export const SettingsProvider = ({ children }) => {
 	};
 
 	return (
-		<SettingsContext.Provider value={{ settings, updateSettings }}>
+		<SettingsContext.Provider
+			value={{
+				settings,
+				updateSettings,
+				favoriteCities,
+				toggleFavorite,
+				isFavorite,
+			}}
+		>
 			{children}
 		</SettingsContext.Provider>
 	);

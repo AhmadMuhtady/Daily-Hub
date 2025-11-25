@@ -9,7 +9,13 @@ const Layout = ({ children }) => {
 			<Header />
 			<div className="flex">
 				<SlideBar />
-				<main className="flex-1 pl-[60px] transition-all">{children}</main>
+				<main
+					className={`flex-1 transition-all duration-200 ${
+						SideBarOpen ? 'pl-[200px]' : 'pl-[60px]'
+					}`}
+				>
+					{children}
+				</main>
 			</div>
 		</div>
 	);

@@ -3,8 +3,6 @@ import { useState, useEffect } from 'react';
 const WEATHER_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY;
 const BASE_URL = import.meta.env.VITE_OPENWEATHER_API_BASE;
 
-const CACHE_DURATION = 30 * 60 * 1000; // 30 minutes
-
 import { useSettings } from '../context/SettingsContext';
 
 export const useWeather = () => {
@@ -19,6 +17,7 @@ export const useWeather = () => {
 	});
 
 	const getCurrentWeather = async (location) => {
+		setError(null);
 		try {
 			const res = await fetch(
 				`${BASE_URL}/weather?q=${location}&appid=${WEATHER_KEY}&units=${settings.tempUnit}`
@@ -36,7 +35,6 @@ export const useWeather = () => {
 
 			const data = await res.json();
 			setWeather(data);
-			console.log(data);
 		} catch (err) {
 			setError(err.message);
 			console.log('Weather API Error:', err.message);
@@ -46,6 +44,7 @@ export const useWeather = () => {
 	};
 
 	const getForecastWeather = async (location) => {
+		setError(null);
 		try {
 			const res = await fetch(
 				`${BASE_URL}/forecast?q=${location}&appid=${WEATHER_KEY}&units=${settings.tempUnit}`
@@ -62,7 +61,6 @@ export const useWeather = () => {
 			}
 
 			const data = await res.json();
-			console.log(data);
 			setForecast(data);
 		} catch (err) {
 			setError(err.message);

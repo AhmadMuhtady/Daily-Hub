@@ -6,6 +6,7 @@ const Input = ({
 	onChange,
 	error,
 	value,
+	...props
 }) => {
 	return (
 		<div>
@@ -20,6 +21,7 @@ const Input = ({
 				}`}
 				onChange={onChange}
 				value={value}
+				{...props}
 			/>
 			{error && <p className="text-red-500 text-sm mt-1">{error}</p>}
 		</div>
