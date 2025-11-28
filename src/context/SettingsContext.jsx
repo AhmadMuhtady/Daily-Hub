@@ -10,6 +10,7 @@ const defaultSettings = {
 	quoteCategory: 'inspirational',
 	weatherAlerts: true,
 	newsUpdates: true,
+	savedClocks: [{ city: 'Beirut', timezone: 'Asia/Beirut' }],
 };
 
 export const SettingsProvider = ({ children }) => {
@@ -43,9 +44,39 @@ export const SettingsProvider = ({ children }) => {
 				return prev;
 			}
 
-			// Add to favorites
 			return [...prev, normalizedCity];
 		});
+	};
+
+	const addClock = (city, timezone) => {
+		setSettings((prev) => {
+			if (prev.savedClocks.length >= 12) {
+				alert('Maximum 12 clocks allowed!');
+				return prev;
+			}
+
+			const exists = prev.savedClocks.some(
+				(clock) => clock.timezone === timezone
+			);
+			if (exists) {
+				alert('Clock already exists!');
+				return prev;
+			}
+
+			return {
+				...prev,
+				savedClocks: [...prev.savedClocks, { city, timezone }],
+			};
+		});
+	};
+
+	const removeClock = (timezone) => {
+		setSettings((prev) => ({
+			...prev,
+			savedClocks: prev.savedClocks.filter(
+				(clock) => clock.timezone !== timezone
+			),
+		}));
 	};
 
 	useEffect(() => {
@@ -68,6 +99,8 @@ export const SettingsProvider = ({ children }) => {
 				favoriteCities,
 				toggleFavorite,
 				isFavorite,
+				addClock,
+				removeClock,
 			}}
 		>
 			{children}
