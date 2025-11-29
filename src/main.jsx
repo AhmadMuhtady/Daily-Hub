@@ -6,14 +6,16 @@ import App from './App.jsx';
 import { ThemeProvider } from './context/ThemeContext.jsx';
 import { SideBarProvider } from './context/SideBarContext.jsx';
 import { SettingsProvider } from './context/SettingsContext.jsx';
-
+import { TodoProvider } from './context/TodoContext.jsx';
 createRoot(document.getElementById('root')).render(
 	<StrictMode>
 		<ThemeProvider>
 			<BrowserRouter>
 				<SideBarProvider>
 					<SettingsProvider>
-						<App />
+						<TodoProvider>
+							<App />
+						</TodoProvider>
 					</SettingsProvider>
 				</SideBarProvider>
 			</BrowserRouter>
